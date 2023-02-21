@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Oswald:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-image: url(../img/ashe_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+input, button{
+    font-family: 'roboto', sans-serif;
+    border-radius: 10px;
+}
+input:focus{
+    transition: 0.5s;
+    border: 2px solid #001bb3;
+    outline: 0;
+}
+input:not(input[type=submit]){
+    padding: 10px;
+    width: 400px;
+    border: none;
+    background-color: rgb(216, 222, 233);
+    font-size: 18px;
+    margin: 10px 0;
+    font-family: 'roboto', 'sans-serif';
+}
+input::placeholder{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Oswald';
+}
+input[type=submit]{
+    border: none;
+    background-color: #d13639;
+    padding: 14px;
+    color: white;
+    width: 125px;
+    font-size: 19px;
+    text-align: center;
+    margin: 50px 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+input[type=submit]:hover{
+    transition: background-color 0.3s;
+    background-color: black;
+}
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+h1{
+    margin: 40px 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+form a:not(#logo){
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    margin-bottom: 20px;
+}
+.RL{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    width: 200px;
+
+    opacity: 0;
+    animation: apparition 1s 0s ease forwards;
+}
+@keyframes apparition{
+    100%{
+        transform: none;
+        opacity: 1;
+    }
+}
+h1:nth-child(1){
+    transform: translateX(-25px);
+    opacity: 0;
+    animation: apparition 0.5s 0s ease-out forwards;
+}
+input:nth-child(2){
+    transform: translateX(-25px);
+    opacity: 0;
+    animation: apparition 0.5s 0.2s ease-out forwards;
+}
+input:nth-child(3){
+    transform: translateX(-25px);
+    opacity: 0;
+    animation: apparition 0.5s 0.4s ease-out forwards;
+}
+input[type=submit]:nth-child(4){
+    transform: translateX(-25px);
+    opacity: 0;
+    animation: apparition 0.5s 0.6s ease-out forwards;
+}
+a:nth-child(5){
+    transform: translateY(-25px);
+    opacity: 0;
+    animation: apparition 0.75s 1s ease-out forwards;
+}

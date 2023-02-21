@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Oswald:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: column;
+
+    background-image: url(../img/lol_background_7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+    
+    color: white;
+    height: 100vh;
+}
+nav{
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 0.4s 0s ease-out forwards;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    transition: border-bottom cubic-bezier(1, 0, 0, 1) 0.3s;
+
+}
+nav a:hover{
+    transition: border-bottom cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    border-bottom:  1px solid #d13639;
+}
+nav a img{
+    width: 40px;
+    transition: 0.5s;
+}
+.apparitionLogo{
+    opacity: 0;
+    animation: apparition 0.5s 0s ease forwards;
+}
+section{
+    width: 600px;
+    margin: 100px 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+div{
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 25px -5px rgba(255, 255, 255, 0.4);
+    padding: 0 25px 25px;
+
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: apparition 0.4s 0.4s ease-out forwards;
+}
+h1{
+    font-size: 4.6rem;
+    text-transform: uppercase;
+    margin: 100px 0;
+    text-shadow: 7px 7px 0 black;
+
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: apparition 0.4s 0.2s ease-out forwards;
+}
+h3, p{
+    padding: 15px;
+}
+h3{
+    font-size: 2.7rem;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+}
+p{
+    color: rgb(196, 196, 196);
+    font-size: 1.25rem;
+    text-align: center;
+    
+}
+button{
+    width: 200px;
+    border: none;
+    font-size: 24px;
+    font-family: 'Oswald';
+    margin: auto;
+    text-transform: uppercase;
+    background-color: #d13639;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    transition: 0.5s;
+    box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.425);
+
+
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 0.6s 0.9s ease-out forwards;
+
+}
+button:hover{
+    transition: background-color, box-shadow 0.3s;
+    background-color: #e2090c;
+    box-shadow: 0 0 15px 0px rgba(255, 255, 255, 0.425);
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+@keyframes apparition{
+    100%{
+        transform: none;
+        opacity: 1;
+    }
+}
